@@ -1,0 +1,8 @@
+{
+  "name": "Vehicle_Details_Search",
+  "app_id": "",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
