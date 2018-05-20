@@ -1,14 +1,109 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+     Vehicle Detail Search
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <ion-card  col-lg-4 offset-lg-4>
+
+
+      <h1 text-center padding>Search Vehicle</h1>
+ <ion-grid >
+   <ion-row>
+     <ion-col>
+       <ion-item>
+         <ion-label floating>MP01XX</ion-label>
+         <ion-input [(ngModel)]="first"></ion-input>
+       </ion-item>
+     </ion-col>
+     <ion-col>
+       <ion-item>
+         <ion-label floating>1234</ion-label>
+       <ion-input [(ngModel)]="second"></ion-input>
+       </ion-item>
+     </ion-col>
+   </ion-row>
+   <ion-row>
+     <button ion-button block (click)="getDetails()">Search</button>
+   </ion-row>
+ </ion-grid>
+  </ion-card>
+
+  <ion-card *ngIf="details" col-lg-4 offset-lg-4>
+    <h1 text-center padding>Details</h1>
+    <ion-grid>
+      <ion-row >
+        <ion-col>Owner Name</ion-col>
+        <ion-col>{{details["Owner Name:"]}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>Maker / Model</ion-col>
+        <ion-col>{{details["Maker / Model:"]}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>Chassis No</ion-col>
+        <ion-col>{{details["Chassis No:"]}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>Engine No</ion-col>
+        <ion-col>{{details["Engine No:"]}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>Registration Date</ion-col>
+        <ion-col>{{details["Registration Date:"]}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>Registration No</ion-col>
+        <ion-col>{{details["Registration No:"]}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>Insurance Upto</ion-col>
+        <ion-col>{{details["Insurance Upto:"]}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>Fitness Upto</ion-col>
+        <ion-col>{{details["Fitness Upto:"]}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>Fuel Type</ion-col>
+        <ion-col>{{details["Fuel Type:"]}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>Fuel Norms</ion-col>
+        <ion-col>{{details["Fuel Norms:"]}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>Vehicle Class</ion-col>
+        <ion-col>{{details["Vehicle Class:"]}}</ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+
 </ion-content>
+
+
+
+<!--"Chassis No:": "MD2A67KY2HCAXXXXX"-->
+<!--​-->
+<!--"Engine No:": "JFYCHAXXXXX"-->
+<!--​-->
+<!--"Fitness Upto:": "01-Jan-1990"-->
+<!--​-->
+<!--"Fuel Norms:": "NOT AVAILABLE"-->
+<!--​-->
+<!--"Fuel Type:": "PETROL"-->
+<!--​-->
+<!--"Insurance Upto:": "24-Aug-2018"-->
+<!--​-->
+<!--"Maker / Model:": "BAJAJ AUTO LTD / NOT AVAILABLE"-->
+<!--​-->
+<!--"Owner Name:": "PRASHEEL SONI"-->
+<!--​-->
+<!--"Registration Date:": "20-Sep-2017"-->
+<!--​-->
+<!--"Registration No:": "MP11MU7160"-->
+<!--​-->
+<!--"Vehicle Class:": ""-->
